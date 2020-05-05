@@ -1,0 +1,348 @@
+<% if (!user) { %>
+	<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>STEELCORP&trade;</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script defer src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"></script>
+    <link href="https://unpkg.com/tailwindcss@^1.0/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="shortcut icon" href="../images/fav_icon.png" type="image/x-icon">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+    <script>
+       		document.addEventListener('DOMContentLoaded', () => {
+	
+    // Get all "navbar-burger" elements
+    const $navbarBurgers = Array.prototype.slice.call(document.querySelectorAll('.navbar-burger'), 0);
+  
+    // Check if there are any navbar burgers
+    if ($navbarBurgers.length > 0) {
+  
+      // Add a click event on each of them
+      $navbarBurgers.forEach( el => {
+        el.addEventListener('click', () => {
+  
+          // Get the target from the "data-target" attribute
+          const target = el.dataset.target;
+          const $target = document.getElementById(target);
+  
+          // Toggle the "is-active" class on both the "navbar-burger" and the "navbar-menu"
+          el.classList.toggle('is-active');
+          $target.classList.toggle('is-active');
+  
+        });
+      });
+    }
+  
+  });
+  function hidediv(){
+      document.getElementById("themes").style.display = "none";
+  }
+  
+  function showDiv() {
+     document.getElementById('themes').style.display = "block";
+  }
+
+  function changethemenes(){
+      document.getElementById("changenav").innerhtml = nesnav;
+  }
+    </script>
+    <style>
+        #themes{
+		position: fixed;
+	  margin: auto;
+	  top: 0;
+	  right: 0;
+	  bottom: 0;
+	  left: 0;
+	  width: 400px;
+      height: 400px;
+      overflow: hidden;
+	}​
+    </style>
+    <link rel="stylesheet" href="https://unpkg.com/bulma@0.8.0/css/bulma.min.css" />
+    <style type="text/css">
+        html,
+        body {
+            font-family: 'Open Sans';
+        }
+
+        img {
+            padding: 5px;
+            border: 1px solid #ccc;
+        }
+    </style>
+</head>
+
+<body>
+    <section class="hero is-fullheight is-default is-bold">
+        <div class="hero-head">
+            <nav class="navbar">
+                <div class="container">
+                    <div class="navbar-brand">
+                        <a class="navbar-item" href="/">
+                            <img src="/steelcorp.png" alt="Logo">
+                        </a>
+                        <span class="navbar-burger burger" data-target="navbarMenu">
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                        </span>
+                    </div>
+                    <div id="navbarMenu" class="navbar-menu">
+                        <div class="navbar-end">
+                            <div class="tabs is-right">
+                                <ul>
+                                    <li class="is-active"><a href="/">Home</a></li>
+                                    <li><a href="/login">Login</a></li>
+                                    <li><a href="/contact">Contact</a></li>
+                                    <li><a href="/request-access">Request Access</a></li>
+                                    <li><a onclick="showDiv()">Themes</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </nav>
+        </div>
+        <div class="hero-body">
+            <div class="container has-text-centered">
+                <div class="columns is-vcentered">
+                    <div class="column is-5">
+                        <figure class="image is-4by3">
+                            <img src="https://picsum.photos/800/600/?random" alt="Description">
+                        </figure>
+                    </div>
+                    <div class="column is-6 is-offset-1">
+                        <h1 class="title is-2">
+                            SteelCorp&trade;
+                        </h1>
+                        <br />
+                        <h2 class="subtitle is-4">
+                            STEELCORP&trade; Members Only LogIn. 
+                        </h2>
+                        <br>
+                        <p class="has-text-centered">
+                            <a class="button is-medium is-info is-outlined" href="/login">
+                                Login
+                            </a>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="themes" style="background-color: #FFFFFF; display: none; z-index: 1; border: solid; border-color: black; overflow-y:auto;" class="themediv" style="padding: 10px;">
+            <span style="padding-bottom: 13px;"></span>
+            <a class="delete" style="padding: 10px;" onclick="hidediv()"></a>
+                 <section class="section" style="border: none;">
+                <div class="container">
+                  <h1 class="title">Theme</h1>
+                  <hr class="nav-divider">
+                  <h2 class="subtitle">
+                  Coming soon.
+                  <hr>
+                  </h2>
+                </div>
+                <div class="list is-hoverable">
+              <a class="list-item" onclick="changethemenes()">
+                Dark
+              </a>
+              <a class="list-item" onclick="changethemepaper()">
+                
+              </a>
+              </section>
+            </div>
+        <div class="hero-foot">
+            <div class="container">
+                <div class="tabs is-centered">
+                    <ul>
+                        <li><a>&copy;SteelCorp&trade;</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+</body>
+
+</html>
+
+<% } else { %>
+	<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Profile &middot; <%=user.username%></title>
+    <style>
+      
+    </style>
+    <link rel="shortcut icon" href="../images/fav_icon.png" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha256-eZrrJcwDc/3uDhsdt61sL2oOBY362qM3lon1gyExkL0=" crossorigin="anonymous" />
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+    <!-- Bulma Version 0.8.x-->
+    <script>
+             		document.addEventListener('DOMContentLoaded', () => {
+	
+    // Get all "navbar-burger" elements
+    const $navbarBurgers = Array.prototype.slice.call(document.querySelectorAll('.navbar-burger'), 0);
+  
+    // Check if there are any navbar burgers
+    if ($navbarBurgers.length > 0) {
+  
+      // Add a click event on each of them
+      $navbarBurgers.forEach( el => {
+        el.addEventListener('click', () => {
+  
+          // Get the target from the "data-target" attribute
+          const target = el.dataset.target;
+          const $target = document.getElementById(target);
+  
+          // Toggle the "is-active" class on both the "navbar-burger" and the "navbar-menu"
+          el.classList.toggle('is-active');
+          $target.classList.toggle('is-active');
+  
+        });
+      });
+    }
+  
+  });
+
+  function hidediv(){
+      document.getElementById("profile").style.display = "none";
+  }
+  
+  function showDiv() {
+     document.getElementById('profile').style.display = "block";
+  }
+    </script>
+    <style>
+       #profile{
+		position: fixed;
+	  margin: auto;
+	  top: 0;
+	  right: 0;
+	  bottom: 0;
+	  left: 0;
+	  width: 400px;
+      height: 400px;
+      overflow: hidden;
+      border-radius: 80%;
+
+	}​
+  .center{
+    margin: auto;
+  width: 50%;
+  border: 3px solid green;
+  padding: 10px;
+  display: block; 
+  margin-left: auto; 
+  margin-right: auto; 
+  width: 80%;
+  }
+    </style>
+    <link rel="stylesheet" href="https://unpkg.com/bulma@0.8.0/css/bulma.min.css"/>  </head>
+    <body>
+        <nav class="navbar" role="navigation" aria-label="main navigation">
+            <div class="navbar-brand">
+              <a class="navbar-item" href="/">
+                <img src="/steelcorp.png" width="112" height="28">&trade;
+              </a>
+          
+              <a role="button" class="navbar-burger burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
+                <span aria-hidden="true"></span>
+                <span aria-hidden="true"></span>
+                <span aria-hidden="true"></span>
+              </a>
+            </div>
+          
+            <div id="navbarBasicExample" class="navbar-menu">
+              <div class="navbar-start">
+                <a class="navbar-item" href="/">
+                  Home
+                </a>
+
+				<a class="navbar-item" href="/allprojects">
+					All Projects
+				</a>
+
+				<a class="navbar-item" href="https://glitch.com/@antisecurlysqaud">
+					ASSA
+				</a>
+
+                <div class="navbar-item has-dropdown is-hoverable">
+                  <a class="navbar-link">
+                    More
+                  </a>
+          
+                  <div class="navbar-dropdown">
+                    <a class="navbar-item" onclick="showDiv()">
+                      Profile
+                    </a>
+                    <hr class="navbar-divider">
+                  </div>
+                </div>
+              </div>
+          
+              <div class="navbar-end">
+                <div class="navbar-item">
+                  <div class="buttons">
+                    <a class="button is-primary" href="/logout">
+                      Log out
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+		  </nav>
+		  <section class="hero is-medium is-primary is-bold" style="height: 400px;">
+			<div class="hero-body">
+			  <div class="container">
+				<h1 class="title">
+				  Hello &middot; <%=user.displayName%>
+        </h1>
+        <br>
+        <br>
+				<h2 class="subtitle">
+				  View Your Profile. And Click All Projects To See Everything You Can Use on SteelClub.
+        </h2>
+        <br>
+        <p>You are Special!</p>
+			  </div>
+			</div>
+      </section>
+
+        <div id="profile" style="display: none; background-color: #f5f5f5; text-align: center; border-color: black; border-style: solid;">
+          <a class="delete is-small" style="padding: 10px;" onclick="hidediv()"></a>
+          <br>
+          <br>
+          <br>
+          <br>
+          <h3 style="text-align: center;"><%=user.username%>'s Profile</h3>
+          <br>
+          <p>Username: <%=user.username%></p>
+          <br>
+          <p>Full Name: <%=user.displayName%></p>
+          <br>
+          <p>ID: <%=user.id%></p>
+          <br>
+          <% if (user.emails) { %>
+            <p> Email: <%= user.emails[0].value %></p>
+          <% } %>
+        </div>
+
+		  <footer class="footer">
+			<div class="content has-text-centered">
+			  <p>
+				&copy;STEELCORP&trade;
+			  </p>
+			</div>
+      </footer>
+    </body>
+  </html>
+	<!--<p>Hello, <%= user.username %>. View your <a href="/profile">profile</a>.</p>-->
+<% } %>
